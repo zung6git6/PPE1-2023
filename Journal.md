@@ -16,3 +16,5 @@ Ensuite, nous avons repris le Git et le GitHub. Cette fois-ci, le sujet est la c
 Sachant que GitHub est une platforme en ligne dédiée au stockage des données Git créées depuis le PC de chaque dévéloppeur, il existe des moyens pour faciliter l'échange entre la plateforme et les fichiers locaux. Nous pouvons utiliser des commandes dans le shell qui commencent par "git" telles que "git add", "git status", "git commit", "git pull", "git push", etc.
 
 Ajoutez une à quelques lignes que vous voudrez supprimer à la fin du journal de bord et committez avec le message "I AM ERROR".
+
+# séance 3
