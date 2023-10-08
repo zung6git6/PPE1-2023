@@ -15,8 +15,7 @@ Ensuite, nous avons repris le Git et le GitHub. Cette fois-ci, le sujet est la c
 
 Sachant que GitHub est une platforme en ligne dédiée au stockage des données Git créées depuis le PC de chaque dévéloppeur, il existe des moyens pour faciliter l'échange entre la plateforme et les fichiers locaux. Nous pouvons utiliser des commandes dans le shell qui commencent par "git" telles que "git add", "git status", "git commit", "git pull", "git push", etc.
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 ## le 04/10/2023
 
 Il existe des moyens pour corriger des erreurs faites dans les fichiers "git", que ce soit des fichiers mis en transit, "commit" ou encore déjà poussés sur GitHub. Pour les commits non poussés, il est possible de défaire les modifications grâce à la commande "git reset". En fonction des besoins, "git reset" propose trois options différentes. La première est "git reset" tout seul, qui vise à revenir à la dernière version du dépôt et annule la mise-en-place, autrement dit, tous les "adds". La deuxième est une version plus souple, "git reset -soft". Tout comme "git reset", "git reset -soft" revient également à la version d'avant mais elle n'annule pas les "adds". Cette commande peut éviter de rajouter tous les adds. Ces deux "reset" partagent un autre point commun : elles gardent toutes les modifications réalisées dans les fichiers cibles. La troisième option est la plus radicale, "git reset -hard". Cela revient à la version du dernier commit, annule toute la mise en place et efface toutes les modifications faites aux fichiers. 
@@ -26,9 +25,4 @@ Pour l'instant, nous traitons uniquement le commit sur lequel nous sommes en tra
 Ci-dessus évoque les cas où l'on n'a pas encore effectué le "push". Une fois que l'on pousse les commits, il est toujours possible de les annuler et les modifier. La commande correspondante est "git revert <commit>".
 
 À part les annulations de modifications, il faut bien faire attention de ne pas commiter à la fois en ligne et au local sinon il y aura des conflits et des erreurs. Dans ce cas, il faut utiliser la commande "git diff" pour voir les différences entre deux commits.
-=======
-ajouter des lignes
->>>>>>> parent of c5341d5 (S3)
-=======
-ajouter des lignes
->>>>>>> parent of c5341d5 (S3)
+
