@@ -1,3 +1,5 @@
+#!/usr/bin/bash
+
 echo "Entrez l'année (2016, 2017, 2018) :"
 read year
 cd /Users/zhongjie/Documents/PPE1-2023/Fichiers/ANN/$year

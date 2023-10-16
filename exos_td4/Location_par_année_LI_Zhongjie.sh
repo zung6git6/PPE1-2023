@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/bash
 
 echo "Entrez une année parmi 2016, 2017 et 2018 : "
 read year
