@@ -26,18 +26,3 @@ Ci-dessus évoque les cas où l'on n'a pas encore effectué le "push". Une fois 
 
 À part les annulations de modifications, il faut bien faire attention de ne pas commiter à la fois en ligne et au local sinon il y aura des conflits et des erreurs. Dans ce cas, il faut utiliser la commande "git diff" pour voir les différences entre deux commits.
 
-
-## le 11/10/2023 séance 4
-
-Pendant cette séance, on a revu "git reset HEAD~NUM" et "git revert <code SHA>". Maintenant, j'ai très bien maîtrisé ces deux commandes. En général, "git revert <code SHA>" sert à créer un nouveau commit qui ne contient pas le commit du <code SHA> que l'on fournit. Par la suite, on peut décider si on fait le "push" ou pas pour synchroniser les fichiers locaux avec le dépôt sur GitHub. De l'autre côté, "git reset HEAD~NUM" sert à revenir dans NUM commits d'avant du HEAD.
-
-Ensuite, on a introduit la "Pipeline".
-< signifie la redirection du contenu d’un fichier
-> signifie la redirection d’une sortie standarde dans un fichier
->>, 2>> et &>> signifie la sortie sans supprimer le contenu du fichier cible 
-2> signifie la sortie d’erreur dans un fichier
-&> signifie la sortie standard et d’erreur dans un fichier
-
-Le script est également très important dans le domaine de "Pipeline". Un script permet de conserver des codes dans un fichier ".sh" et pour réutiliser éventuellement sur plusieurs PC.
-Pour rendre un script valable, il faut d'abord taper "chmod +x /chemin/fichier.sh" dans le terminal, puis taper "./fichier.sh" afin de l'exécuter.
-Quant à la varibale dans un script du type ".sh", on fait l'affectation ainsi : "nom_variable=valeur_à_définir". Une fois que l'on affecte une variable, on peut la réutiliser en préfixant un "$" : $nom_variable. Enfin, concernant la valeur, elle est présentée entre double guillemets si c’est une chaîne de caractères, sinon sans guillemets.
