@@ -28,12 +28,12 @@ Ci-dessus évoque les cas où l'on n'a pas encore effectué le "push". Une fois 
 
 ## le 11/10/2023
 
-Pendant cette séance, on a revu "git reset HEAD~NUM" et "git revert <code SHA>". Maintenant, j'ai très bien maîtrisé ces deux commandes. En général, "git revert <code SHA>" sert à créer un nouveau commit qui ne contient pas le commit du <code SHA> que l'on fournit. Par la suite, on peut décider si on fait le "push" ou pas pour synchroniser les fichiers locaux avec le dépôt sur GitHub. De l'autre côté, "git reset HEAD~NUM" sert à revenir dans NUM commits d'avant du HEAD.
+Pendant cette séance, on a revu "git reset HEAD~NUM" et "git revert <"code SHA">". Maintenant, j'ai très bien maîtrisé ces deux commandes. En général, "git revert <"code SHA">" sert à créer un nouveau commit qui ne contient pas le commit du <code SHA> que l'on fournit. Par la suite, on peut décider si on fait le "push" ou pas pour synchroniser les fichiers locaux avec le dépôt sur GitHub. De l'autre côté, "git reset HEAD~NUM" sert à revenir dans NUM commits d'avant du HEAD.
 
 Ensuite, on a introduit la « Pipeline".
-< signifie la redirection du contenu d’un fichier
-> signifie la redirection d’une sortie standard dans un fichier
->>, 2>> et &>> signifie la sortie sans supprimer le contenu du fichier cible
+"<" signifie la redirection du contenu d’un fichier 
+">" signifie la redirection d’une sortie standard dans un fichier >>, 
+2>> et &>> signifie la sortie sans supprimer le contenu du fichier cible
 2> signifie la sortie d’erreur dans un fichier
 &> signifie la sortie standard et d’erreur dans un fichier
 
