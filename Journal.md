@@ -174,3 +174,11 @@ Options
 -o : rename (curl -o name.txt <URL>) ⚠️curl里是小写o，wget里是大写O
 -L : suivre les redirections
 -i : it not only retrieves the content from the URL but also includes the HTTP response headers (y compirs les codes HTTP…) in the output. This is useful for inspecting the response headers sent by the server
+
+## Séance 6
+Dans cette séance, on a appris comment écrire un script destiné à extraire les informations des URLs comme le type d'encodage et le code HTTP. Nous avons également appris à les afficher dans l'ordre par tabulation.
+
+À part ce qu'on a vu déjà dans la semaine dernière, j'ai appris quelques nouvelles options de "curl" :
+	option "-s" signifie le mode silencieux, ce qui n'envoie pas de message d'erreur lorsqu'il y en a ;
+	option "-I" n'affiche que les en-tête de l'URL au lieu de son contenu textuel.
+Puis, j'ai appris à utiliser des pipelines, en combinant "curl", "egrep" et "sed" à extraire précisément des informations que je veux afficher.
