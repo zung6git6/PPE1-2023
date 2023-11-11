@@ -182,3 +182,14 @@ Dans cette séance, on a appris comment écrire un script destiné à extraire l
 	option "-s" signifie le mode silencieux, ce qui n'envoie pas de message d'erreur lorsqu'il y en a ;
 	option "-I" n'affiche que les en-tête de l'URL au lieu de son contenu textuel.
 Puis, j'ai appris à utiliser des pipelines, en combinant "curl", "egrep" et "sed" à extraire précisément des informations que je veux afficher.
+
+## Séance 7
+Revenat au miniprojet, je n'avais pas adopté une manière simple à afficher les codes HTTP et les codes charset. En réalité, pour les codes HTTP, à part l'option -s et -I, il est possible d'utiliser deux autres options supplémentaires qui sont -w et -o. Voci la ligne de commande : curl -s -I -w "%{http_code}" -o /dev/null https://fr.wikipedia.org/wiki/Robot. -w "%{http_code}" permet de n'extraire que le {http_code} de l'en-tête (-I) comme une sortie de non stdout. Pourtant, tout l'en-tête est toujours sortie dans stdout, donc il faut se servir de -o pour les "output" dans un fichier poubelle "/dev/null" où l'on peut mettre n'importe quoi dedans sans aucune répercussion. Une petite chose à noter est qu'en pratique, nous rencontrons souvent des codes de redirection 300. Afin de poursuivre la redirection, il est fortement conseillé d'ajouter l'option -L dans la commande curl en tenant compte que -L ne fait rien aux URLS non-redirigés. 
+
+En suivant la logique pour obtenir les codes HTTP, il semble que nous pouvons refaire la même chose en vue d'avoir les codes charset. En réalité, nous allons partir du même principe mais il y a quand même quelques d'autres problèmes à traiter. Comme les codes charset dans l'en-tête sont affichés sous forme de : charset=UTF-8 (pour l'exemple de UTF-8), nous devons supprimer "charset=" et retenir que le code après "=". Afin de réaliser cette étape, nous pouvons employer la commande "grep" : 
+grep -E -o "charset=\S+" (un non caractère d'espace) | cut -d"=" -f2 (la deuxième colonne) | tail -n 1 (la dernière ligne).
+
+En faisant le miniprojet supplémentaire, j'ai également appris les commandes "tr", "paste" et "awk".
+"tr" est un peu comme "sed", sert à remplacer ou supprimer des caractères dans un texte.
+Quant à "paste", comme indiqué par le nom, elle fusionne des textes.
+Enfin, "awk" est une commande complexe mais puissante. Elle peut repérer des phrases avec l'expression régulière et les traiter par la suite. 
