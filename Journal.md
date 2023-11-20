@@ -193,3 +193,15 @@ En faisant le miniprojet supplémentaire, j'ai également appris les commandes "
 "tr" est un peu comme "sed", sert à remplacer ou supprimer des caractères dans un texte.
 Quant à "paste", comme indiqué par le nom, elle fusionne des textes.
 Enfin, "awk" est une commande complexe mais puissante. Elle peut repérer des phrases avec l'expression régulière et les traiter par la suite. 
+
+## Séance 8
+Dans cette séance, on a vu comment créer une page HTML avec bash et transformer une sortie de bash en tableau de HTML.
+
+En général, pour créer une page HTML via bash, il faut utiliser la commande "echo" :
+	echo "<html><head><body>" > example.html
+Ensuite, pour apporter des modificaitons au dessus : on va encore utiliser la commande "echo" et mettre le contenu apporté en argument avec double chevrons à la fin pour diriger l'entrée en fichier :
+	echo "	<table>
+				<tr>1</tr>
+					<td>Yes</td>
+			</table></body></html>" >> example.html
+Pour transformer un dépôt git en site, il faut mettre un fichier nommé "index.html" dans le dossier cible. Avant de push, on va dans l'onglet de "page" de "setting" de github. On choisit "main" sous le "branch", et ensuite on choisit "root" dans le menu déroulant à droite. Puis, on fait le push et on attends quelques minutes jusqu'à ce que les actions dans "action" soient terminées. On peut dès lors consulter nos pages web avec le lien sous forme de "https://nomutilisateur.github.io/nomderepo/sousdossier"
