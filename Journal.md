@@ -205,3 +205,9 @@ Ensuite, pour apporter des modificaitons au dessus : on va encore utiliser la co
 					<td>Yes</td>
 			</table></body></html>" >> example.html
 Pour transformer un dépôt git en site, il faut mettre un fichier nommé "index.html" dans le dossier cible. Avant de push, on va dans l'onglet de "page" de "setting" de github. On choisit "main" sous le "branch", et ensuite on choisit "root" dans le menu déroulant à droite. Puis, on fait le push et on attends quelques minutes jusqu'à ce que les actions dans "action" soient terminées. On peut dès lors consulter nos pages web avec le lien sous forme de "https://nomutilisateur.github.io/nomderepo/sousdossier"
+
+## Séance 9
+
+Dans cette séance, nous avons commencé à faire le projet groupe. J'ai commencé à recueillir les sites en chinois qui correspondent à notre projet. En revanche, j'ai rencontré des difficultés à trouver des sites qui contiennent des textes scientifiques car la pluaprt des textes sont en format de PDF.
+
+Durant cette semaine, j'ai fini d'écrire le script pour le comptage de l'occurrence du mot clé et celui pour les contextes. Les scripts n'ont pas posé de gros problème. Cependant, on n'a pas réussi à récupéré les données depuis les sites en chinois parce que certains sont énormément écrits en JavaScripts et certains montrent un refus à cause de la location de mon serveur. De ce fait, je suis actuellement bloqué pour les sites en chinois à défaut de solution.

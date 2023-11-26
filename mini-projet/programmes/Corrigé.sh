@@ -19,7 +19,8 @@ echo "<html><head></head><body>" > $html_file
 echo "<table border='1'>" >> $html_file
 while read -r line;
 do
-    response=$(curl -s -I -L -w "%{http_code}" -o /dev/null $line)
+    lang=$(basename $URLS .txt)
+    response=$(curl -s -L -w "%{http_code}" -o /"$lang"-"$lineno" $line)
     charset=$(curl -s -I -L -w "%{content_type}" -o /dev/null $line | grep -E -o "charset=\S+" | cut -d"=" -f2 | tail -1)
     echo "<tr><td>$lineno</td><td>$line</td><td>$response</td><td>$charset</td></tr>" >> $html_file
     lineno=$(expr $lineno + 1)
