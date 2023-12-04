@@ -211,3 +211,9 @@ Pour transformer un dépôt git en site, il faut mettre un fichier nommé "index
 Dans cette séance, nous avons commencé à faire le projet groupe. J'ai commencé à recueillir les sites en chinois qui correspondent à notre projet. En revanche, j'ai rencontré des difficultés à trouver des sites qui contiennent des textes scientifiques car la pluaprt des textes sont en format de PDF.
 
 Durant cette semaine, j'ai fini d'écrire le script pour le comptage de l'occurrence du mot clé et celui pour les contextes. Les scripts n'ont pas posé de gros problème. Cependant, on n'a pas réussi à récupéré les données depuis les sites en chinois parce que certains sont énormément écrits en JavaScripts et certains montrent un refus à cause de la location de mon serveur. De ce fait, je suis actuellement bloqué pour les sites en chinois à défaut de solution.
+
+## Séance 10
+
+Durant cette séance, nous avons révisé le script que nous avons rédigé jusqu'à présent. Nous y avons ajouté des conditions "if" pour filtrer les sites non 200. Nous avons également pris en main la génération des concordances et la mise en place des contraintes au niveau du nombre de mots dans les contextes gauches et droits pour le terme en question. 
+
+Concernant le projet en groupe, j'ai parvenu à résoudre les problèmes d'encodage et de tokenisation liés aux textes en chinois. Toutes les commandes ne décodent pas un texte en UTF-8, donc il faut ajouter "-assume_charset=utf-8 --display_charset=utf-8" dans la commande de lynx pour lire et afficher correctement les caractères chinois. Étant donné que le chinois s'écrit sans espace, la tokenisation que nous trouvons courante sur les textes en alphabet latin ne marche plus. Cela étant, il est inévitable de s'adresser à des outils adéquats comme "SketchEngine", qui interprète correctement les textes en chinois et conclut à une belle analyse textométrique.
